@@ -7,24 +7,30 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  background-color: #ECECEC;
 }
 header{
   width: 100vw;
   height: 25%;
   position: relative;
-  outline: 1px solid red;
 }
 main {
 width: 100vw;
+height: 60%
 }
 nav {
 
 }
 section {
+  padding: 2% 1%;
   width: 100vw;
-  height: 30%;
+  height: 50%;
 }
 footer {
-width: 75vw;
-height: 15%;
+  padding: 2% 1%;
+  width: 75vw;
+  height: 15%;
+}
+p {
+  text-indent: 2vw;
 }
