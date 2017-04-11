@@ -6,14 +6,16 @@
   left: 0vw;
 }
 .my-picture {
-  max-width: 100%;
+  max-width: 300px;
+  max-width: 400px;
+  width:25vw;
   height: auto;
 }
 .name-container {
   display: block;
   right: 0vw;
-  width: 83.7vw;
-  height: 21.58vw;
+  width: 75vw;
+  height: 20vh;
   position: absolute;
   padding: 6vw 0vw 0vw 10vw;
 }
