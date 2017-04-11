@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Michael Miller</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="styles/modules.css">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="picture">
         <img class="my-picture" src="img/me_300x400.jpg" alt="Picture of Michael Miller">
       </div>
@@ -28,16 +27,17 @@
           </ul>
         </div>
       </div>
-      <span class="icon-menu"></span>
-      <ul class="navigation-list">
-        <li>Top</li>
-        <li>About Me</li>
-        <li>Projects</li>
+      <span id="icon-menu"></span>
+      <ul id="navigation-list">
+        <a href="#header"><li>TOP</li></a>
+        <a href="#about-me"><li>ABOUT ME</li></a>
+        <a href="#projects"><li>PROJECTS</li></a>
+        <a href="#footer"><li>CONTACT ME</li></a>
       </ul>
     </header>
     <main>
       <section>
-        <article class="about-me">
+        <article class="about-me" id="about-me">
           <h2>A Little About Myself</h2>
           <hr>
           <p>I am a driven IT professional with industry experience and electrical background. Adept in troubleshooting a wide variety of hardware and software applications with a passion for learning new technologies and methods of implementation.
@@ -51,11 +51,10 @@
       </section>
       <hr>
       <section>
-        <article class="projects">
-        </article>
+        <article class="projects" id="projects"></article>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <details>
         <summary>Contact Me</summary>
         <ul>

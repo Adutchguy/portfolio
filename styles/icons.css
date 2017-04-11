@@ -1,13 +1,11 @@
-.icon-menu:before {
-  content: "\e9bd";
-}
-.navigation-list {
-  z-index: 10;
-}
-.icon-menu {
+#icon-menu {
   position: fixed;
   top: 1%;
   right: 1%;
+  font-size: 4vw;
+}
+#icon-menu:before {
+  content: "\e9bd";
 }
 @font-face {
   font-family: 'icomoon';
@@ -20,7 +18,7 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[id^="icon-"], [id*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -34,7 +32,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-menu:before {
-  content: "\e9bd";
+#navigation-list {
+  position: fixed;
+  top: 4%;
+  right: 1%;
+  text-align: center;
 }

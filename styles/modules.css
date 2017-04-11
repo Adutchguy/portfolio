@@ -5,6 +5,7 @@
   position: absolute;
   left: 0%;
   top: 0%;
+  outline: 2px solid blue;
 }
 .my-picture {
   border-radius: 0 0 0 5px;
@@ -27,9 +28,10 @@
   background: -webkit-linear-gradient(top, rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%);
   background: linear-gradient(to bottom, rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#3f4c6b',GradientType=0 );
+  outline: 3px solid yellow;
 }
 .name-h1 {
-  font-size: 8vw;
+  font-size: 8vh;
   position: absolute;
   top: 25%;
   transform: translateX(50%);
@@ -38,7 +40,7 @@
 }
 .personal-attr {
   position: absolute;
-  font-size: 4vw;
+  font-size: 4vh;
   right: 50%;
   bottom: 15%;
   transform: translateX(50%);

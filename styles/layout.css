@@ -13,6 +13,7 @@ header{
   width: 100vw;
   height: 25%;
   position: relative;
+  outline: 1px solid red;
 }
 main {
 width: 100vw;
