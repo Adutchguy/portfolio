@@ -1,10 +1,10 @@
 header {
   background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* ff3.6+ */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
-  background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* ie10+ */
-  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* w3c */
+  background: -webkit-linear-gradient(45deg, rgba(187,220,201,1) 0%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, rgba(187,220,201,1) 0%, rgba(0,0,0,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(187,220,201,1) 0%, rgba(0,0,0,1) 100%); /* ie10+ */
+  background: linear-gradient(45deg, rgba(187,220,201,1) 0%, rgba(0,0,0,1) 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* ie6-9 */
 }
 main {
@@ -17,13 +17,13 @@ footer {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  left: 10%;
+  left: 8%;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0 auto;
   border: none;
-  font: normal 3.5vw/normal "Anton", Helvetica, sans-serif;
+  font: normal 5vw/normal "Anton", Helvetica, sans-serif;
   color: rgb(112, 112, 112);
   text-align: center;
   text-transform: uppercase;
