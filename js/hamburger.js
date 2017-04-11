@@ -1,12 +1,11 @@
 'use strict'
 
-var nav = $('nav');
-var ul = $('.navigation-list');
-
 $(document).ready(function(){
-  nav.click(function(event){
+  var icon = $('.icon-menu');
+  var ul = $('.navigation-list');
+  ul.hide();
+  icon.click(function(event){
     event.preventDefault();
-    nav.style.display = 'none';
-    ul.style.display = 'block';
+    ul.show();
   })
 })

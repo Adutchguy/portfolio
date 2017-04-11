@@ -1,14 +1,13 @@
 .icon-menu:before {
   content: "\e9bd";
 }
-nav {
-  /*display: none;*/
+.navigation-list {
+  z-index: 10;
+}
+.icon-menu {
   position: fixed;
   top: 1%;
   right: 1%;
-}
-nav ul {
-  display: none;
 }
 @font-face {
   font-family: 'icomoon';
