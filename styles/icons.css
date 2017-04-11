@@ -3,6 +3,7 @@
   top: 1%;
   right: 1%;
   font-size: 4vw;
+  color:rgba(108, 108, 108, 0.88);
 }
 #icon-menu:before {
   content: "\e9bd";
@@ -19,7 +20,6 @@
 }
 
 [id^="icon-"], [id*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -27,14 +27,16 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 #navigation-list {
   position: fixed;
-  top: 4%;
+  top: 1%;
   right: 1%;
   text-align: center;
+  color:rgba(108, 108, 108, 0.88);
+  font-size: 1.5vw;
+  line-height: 3vw;
+  font-weight: bolder;
 }
