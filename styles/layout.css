@@ -10,10 +10,8 @@ body {
 }
 header{
   width: 100vw;
-  height: 20vh;
+  height: 25%;
   position: relative;
-}
-header{
   outline: 1px solid red;
 }
 main {
@@ -23,8 +21,10 @@ nav {
 
 }
 section {
-
+  width: 100vw;
+  height: 30%;
 }
 footer {
-
+width: 75vw;
+height: 15%;
 }
