@@ -7,8 +7,13 @@ header {
   background: linear-gradient(45deg, rgba(187,220,201,1) 0%, rgba(0,0,0,1) 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=1 ); /* ie6-9 */
 }
-main {
-
+.about-me div {
+  background: -webkit-linear-gradient(135deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -webkit-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), rgba(77,124,112,1);
+  background: -moz-linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), -moz-linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), rgba(77,124,112,1);
+  background: linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), rgba(77,124,112,1);
+  border-radius: 15px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 footer {
 
@@ -17,7 +22,7 @@ footer {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  left: 8%;
+  left: 8
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -57,7 +62,7 @@ footer {
 }
 .about-me h2 {
   font-size: 5vw;
-  padding: 1% 1% 2% 1%;
+  padding: 1% 1% 1% 1%;
   text-align: center;
 }
 .about-me p {
@@ -66,7 +71,9 @@ footer {
   padding: 0 1% 0 1%;
 }
 hr {
-  height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 0;
   border-style: solid;
   border-color: #8c8b8b;
   border-width: 1px 0 0 0;
@@ -81,4 +88,10 @@ hr:before {
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+.mySlides {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 2px 1px;
 }
