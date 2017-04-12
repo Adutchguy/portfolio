@@ -22,7 +22,7 @@ footer {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  left: 8
+  left: 5%;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -65,10 +65,12 @@ footer {
   padding: 1% 1% 1% 1%;
   text-align: center;
 }
-.about-me p {
-  font-size: 3vw;
+.paragraph {
+  font-size: 2.5vw;
   text-align: justify;
   padding: 0 1% 0 1%;
+  height: 35vw;
+  line-height: 3vw;
 }
 hr {
   margin-top: 0;
