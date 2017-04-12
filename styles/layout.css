@@ -33,6 +33,9 @@ section {
   padding: 0% 0%;
   width: 100%;
 }
+main section:last-of-type {
+  height: 55vw;
+}
 footer {
   padding: 2% 0%;
   width: 100%;
