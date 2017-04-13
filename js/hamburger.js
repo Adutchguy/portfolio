@@ -1,6 +1,6 @@
 'use strict'
 
-var icon = $('#icon-menu');
+var icon = $('.icon-menu');
 var ul = $('#navigation-list');
 ul.hide();
 icon.on('mouseover',function() {
