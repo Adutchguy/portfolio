@@ -23,11 +23,6 @@ figure {
   float: left;
   margin: 1% 2%;
 }
-/*@media (max-width: 450px) {
-  figure {
-    margin: 3% 2%;
-  }*/
-}
 section {
   padding: 0% 0%;
   width: 100%;
