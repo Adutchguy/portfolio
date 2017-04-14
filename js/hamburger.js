@@ -1,16 +1,13 @@
 'use strict'
 
-var icon = document.getElementById('icon-menu');
-var ul = document.getElementById('navigation-list');
-ul.style.display = 'none';
-icon.addEventListener('mouseover',function(event) {
-  event.preventDefault();
-  icon.style.display = 'none';
-  ul.style.display = 'block';
-})
-
-ul.addEventListener('mouseleave',function(event) {
-  event.preventDefault();
-  icon.style.display = 'block';
-  ul.style.display = 'none';
+var icon = $('.icon-menu');
+var ul = $('#navigation-list');
+ul.hide();
+icon.on('mouseover',function() {
+    icon.fadeOut(800);
+    ul.fadeIn(800);
+  })
+ul.on('mouseleave',function(){
+  icon.slideDown(800);
+  ul.slideUp(800);
 })

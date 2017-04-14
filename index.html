@@ -22,7 +22,7 @@
           <li>All Around Good Dude</li>
         </ul>
       </div>
-      <span id="icon-menu"></span>
+      <span class="icon-menu"></span>
       <ul id="navigation-list">
         <a href="#header"><li>TOP</li></a>
         <a href="#about-me"><li>ABOUT ME</li></a>
@@ -36,11 +36,11 @@
           <h2>A Little About Myself</h2>
           <div>
             <figure >
-              <img class="mySlides" src="img/1.jpg" style="width:100%;height:100%" >
+              <img class="mySlides" src="img/1.jpg" style="width:100%;height:100%" fadeIn="500" >
               <img class="mySlides" src="img/2.jpg" style="width:100%;height:100%">
               <img class="mySlides" src="img/3.jpg" style="width:100%;height:100%">
             </figure>
-            <div class="paragraph">  
+            <div class="paragraph">
               <p>I am a driven IT professional with industry experience and electrical background. Adept in troubleshooting a wide variety of hardware and software applications with a passion for learning new technologies and methods of implementation.
               </p>
               <br>
@@ -53,26 +53,33 @@
         </article>
       </section>
       <section>
-        <article class="projects" id="projects"></article>
+        <article class="projects-article" id="projects">
+          <h2>Projects</h2>
+          <div>
+            <figure class="projects-container">
+              <a class="projects" href="#"><img src="img/busmall.jpg" alt="Bus Mall Project Picture"></a>
+              <a class="projects" href="#"><img src="img/cookie_stand.jpg" alt="Cookie Stand Project Picture"></a>
+              <a class="projects" href="#"><img src="img/about_me.jpg" alt="About Me Project Picture"></a>
+            </figure>
+          </div>
+        </article>
       </section>
     </main>
     <footer id="footer">
-      <details>
-        <summary>Contact Me</summary>
-        <ul>
-          <li><a href="mailto:mdm_8@hotmail.com" target="_top">Email Me</a></li>
-          <li>Phone: (360)631-1564</li>
-        </ul>
-      </details>
+      <h2>Connect With Me</h2>
       <div class="icon-container">
         <ul class="icon-list">
-          <li><img src="http://placehold.it/50x50" alt=""></li>
-          <li><img src="http://placehold.it/50x50" alt=""></li>
-          <li><img src="http://placehold.it/50x50" alt=""></li>
+          <li class="foot-icon"><a href="mailto:mdm_8@hotmail.com" target="_top"><span class="icon-envelop "></span></a></li>
+          <li class="foot-icon"><a href="https://www.facebook.com/Adutchguy" target="_blank"><span class="icon-facebook "></span></a></li>
+          <li class="foot-icon"><a href="https://www.instagram.com/adutchguy1986/" target="_blank"><span class="icon-instagram "></span></a></li>
+          <li class="foot-icon"><a href="https://github.com/Adutchguy" target="_blank"><span class="icon-github "></span></a></li>
+          <li class="foot-icon"><a href="https://www.linkedin.com/in/Adutchguy" target="_blank"><span class="icon-linkedin2 "></span></a></li>
         </ul>
       </div>
     </footer>
     <script type="text/javascript" src="js/slideShow.js"></script>
     <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/projects.js"></script>
+    <script type="text/javascript" src="js/projectApp.js"></script>
   </body>
 </html>
