@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="edu-template" type="text/x-handlebars-template">
+      <article class="edu-article">
+        <h2>Education</h2>
+        <ul>
+          <li>{{organization}}</li>
+          <li>{{topicOfStudy}}</li>
+          <li>{{startDate}}</li>
+          <li>{{endDate}}</li>
+        </ul>
+      </article>
+    </script>
   </head>
   <body>
     <header id="header">
@@ -64,6 +75,9 @@
             </figure>
           </div>
         </article>
+      </section>
+      <section>
+
       </section>
     </main>
     <footer id="footer">
