@@ -20,3 +20,18 @@ var projects = [
     date:   '2017-10-03'
   },
 ]
+
+var education = [
+  {
+    organization: 'Edmonds Community College',
+    topicOfStudy: 'Network Administration',
+    startDate: '2013',
+    endDate: '2015'
+  },
+  {
+    organization: 'Code Fellows',
+    topicOfStudy: 'Full Stack Javascript',
+    startDate: '2017-03-06',
+    endDate: 'present'
+  }
+]
