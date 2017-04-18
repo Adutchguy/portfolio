@@ -2,30 +2,14 @@
 
 var source   = $("#edu-template").html();
 var template = Handlebars.compile(source);
-
-function createArticle(index) {
-  education.each(function(){
-    var context = {organization: education[em].organization, topicOfStudy: education[0].topicOfStudy, startDate: education[0].startDate, endDate: education[0].endDate};
-    var html    = template(context);
-})
-}
+var i = 0;
 var edu = [];
 
-function Education (opts) {
-  for (key in opts) {
-    this[key] = opts[key];
-  }
-};
-
-Education.prototype.toHtml = function() {
-  var context = {organization: this.organization, topicOfStudy: this.topicOfStudy, startDate: this.startDate, endDate: this.endDate};
-  var html    = template(context);
-};
-
-education.forEach(function(eduObject) {
-  edu.push(new Education(eduObject));
-});
-
-edu.forEach(function(ourNewEduObject){
-  $('#education-section').append(ourNewEduObject.toHtml());
-});
+function createArticle() {
+  education.forEach(function(education){
+    var context = {organization: education.organization, topicOfStudy: education.topicOfStudy, startDate: education.startDate, endDate: education.endDate};
+    var html = template(context);
+    $('#education-section').append(html);
+  });
+}
+createArticle();

@@ -105,6 +105,21 @@ header {
   margin: auto;
   box-shadow: 0 0 2px 1px;e-
 }
+#education-section h2 {
+  font-size: 5vw;
+  padding: 1% 1% 1% 1%;
+  text-align: center;
+}
+.edu-article {
+  display: inline-block;
+  width: 40%;
+  margin: 1% 5%;
+  font-size: 2vw;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1%;
+  list-style: circle;
+}
 #footer h2 {
   font-size: 5vw;
   padding: 1% 1% 1% 1%;
