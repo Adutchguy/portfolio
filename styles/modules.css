@@ -103,7 +103,7 @@ header {
   height: 100%;
   border-radius: 15px;
   margin: auto;
-  box-shadow: 0 0 2px 1px;e-
+  box-shadow: 0 0 2px 1px;
 }
 #education-section h2 {
   font-size: 5vw;
@@ -120,14 +120,15 @@ header {
   border-radius: 15px;
   padding: 1%;
   list-style: circle;
-}
-#footer h2 {
-  font-size: 5vw;
-  padding: 1% 1% 1% 1%;
-  text-align: center;
+  box-shadow: 0 0 2px 1px;
 }
 .edu-div {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+#footer h2 {
+  font-size: 5vw;
+  padding: 1% 1% 1% 1%;
+  text-align: center;
 }
