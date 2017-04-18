@@ -113,7 +113,8 @@ header {
 .edu-article {
   display: inline-block;
   width: 40%;
-  margin: 1% 5%;
+  margin-left: 4%;
+  margin-right:4%;
   font-size: 2vw;
   border: 2px solid black;
   border-radius: 15px;
@@ -124,4 +125,9 @@ header {
   font-size: 5vw;
   padding: 1% 1% 1% 1%;
   text-align: center;
+}
+.edu-div {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
