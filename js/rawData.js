@@ -23,15 +23,27 @@ var projects = [
 
 var education = [
   {
+    organization: 'Code Fellows',
+    topicOfStudy: 'Full Stack Javascript',
+    startDate: '2017-03-06',
+    endDate: 'present'
+  },
+  {
     organization: 'Edmonds Community College',
     topicOfStudy: 'Network Administration',
     startDate: '2013',
     endDate: '2015'
   },
   {
-    organization: 'Code Fellows',
-    topicOfStudy: 'Full Stack Javascript',
-    startDate: '2017-03-06',
-    endDate: 'present'
+    organization: 'Skagit Valley College',
+    topicOfStudy: 'Automotive Technology',
+    startDate: '404',
+    endDate: '404'
+  },
+  {
+    organization: 'Everett Community College',
+    topicOfStudy: 'Fire Fighting',
+    startDate: '404',
+    endDate: '404'
   }
 ]
