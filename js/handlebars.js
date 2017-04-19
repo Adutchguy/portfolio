@@ -1,15 +1,19 @@
 'use strict'
 
-var source   = $("#edu-template").html();
-var template = Handlebars.compile(source);
-var i = 0;
-var edu = [];
+let source   = $("#edu-template").html();
+let template = Handlebars.compile(source);
+let education = JSON.parse(localStorage.rawData);
+
+$.get('data/rawData.json', function(data){
+  let education = data;
+  localStorage.rawData = JSON.stringify(education);
+})
+createArticle();
 
 function createArticle() {
   education.forEach(function(education){
-    var context = {organization: education.organization, topicOfStudy: education.topicOfStudy, startDate: education.startDate, endDate: education.endDate};
-    var html = template(context);
+    let context = {organization: education.organization, topicOfStudy: education.topicOfStudy, startDate: education.startDate, endDate: education.endDate};
+    let html = template(context);
     $('.edu-div').append(html);
   });
 }
-createArticle();
