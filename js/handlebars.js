@@ -9,7 +9,7 @@ function createArticle() {
   education.forEach(function(education){
     var context = {organization: education.organization, topicOfStudy: education.topicOfStudy, startDate: education.startDate, endDate: education.endDate};
     var html = template(context);
-    $('#education-section').append(html);
+    $('.edu-div').append(html);
   });
 }
 createArticle();

@@ -1,7 +1,7 @@
 .icon-menu {
   position: fixed;
   top: 1%;
-  right: 1%;
+  right: 2.5%;
   font-size: 4vw;
   color:rgba(108, 108, 108, 0.88);
 }
@@ -58,12 +58,12 @@
 #navigation-list {
   z-index: 100;
   position: fixed;
-  top: 1%;
+  top: 1.5%;
   right: 1%;
   text-align: center;
   color:rgba(210, 210, 210, 0.88);
-  font-size: 1.5vw;
-  line-height: 3vw;
+  font-size: 1vw;
+  line-height: 2vw;
   font-weight: bolder;
   background-color: rgba(41, 40, 40, 0.59);
   border-radius: 10px;

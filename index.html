@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="styles/modules.css">
     <script id="edu-template" type="text/x-handlebars-template">
       <article class="edu-article">
-        <h2>Education</h2>
         <ul>
-          <li>{{organization}}</li>
-          <li>{{topicOfStudy}}</li>
-          <li>{{startDate}}</li>
-          <li>{{endDate}}</li>
+          <li>Org: {{organization}}</li>
+          <li>Topic: {{topicOfStudy}}</li>
+          <li>From: {{startDate}}</li>
+          <li>To: {{endDate}}</li>
         </ul>
       </article>
     </script>
   </head>
   <body>
+    <script type="text/javascript">$('body').hide().fadeIn(2000);</script>
     <header id="header">
       <h1 class="name-h1">Michael Miller</h1>
       <div class="personal-attr">
@@ -39,6 +39,7 @@
         <a href="#header"><li>TOP</li></a>
         <a href="#about-me"><li>ABOUT ME</li></a>
         <a href="#projects"><li>PROJECTS</li></a>
+        <a href="#education-section"><li>EDUCATION</li></a>
         <a href="#footer"><li>CONTACT ME</li></a>
       </ul>
     </header>
@@ -78,6 +79,9 @@
       </section>
       <section id="education-section">
         <h2>Education</h2>
+        <div class="edu-div">
+
+        </div>
       </section>
     </main>
     <footer id="footer">
