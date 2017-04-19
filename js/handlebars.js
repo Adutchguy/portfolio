@@ -7,7 +7,6 @@ let education = JSON.parse(localStorage.rawData);
 $.get('data/rawData.json', function(data){
   let education = data;
   localStorage.rawData = JSON.stringify(education);
-  debugger;
 })
 createArticle();
 
