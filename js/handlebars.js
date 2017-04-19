@@ -4,7 +4,7 @@ let source   = $("#edu-template").html();
 let template = Handlebars.compile(source);
 let education = JSON.parse(localStorage.rawData);
 
-$.get('data/rawData.json', function(data){
+$.get('data/rawData.json').then(function(data){
   let education = data;
   localStorage.rawData = JSON.stringify(education);
 })
