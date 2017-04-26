@@ -1,6 +1,6 @@
 'use strict';
 
-var projectObjs = [];
+let projectObjs = [];
 
 function Projects(projects) {
   this.title = projects.title,
@@ -9,15 +9,15 @@ function Projects(projects) {
   this.date = projects.date
 }
 
-Projects.prototype.toHtml = function() {
-  var $newProject = $('.project1')
+Projects.prototype.toHtml = () => {
+  let $newProject = $('.project1')
 }
 
-projects.forEach(function(articleObject) {
+projects.forEach((articleObject) => {
   projectObjs.push(new Projects(articleObject));
 });
 
-$("a.projects").each(function(index) {
-  var i = index;
+$("a.projects").each( =>(index) {
+  let i = index;
   $(this).attr('href', projectObjs[i].url);
 })
