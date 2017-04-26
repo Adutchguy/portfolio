@@ -5,8 +5,9 @@
 
   projectController.init = () => {
     $('#about-me-section').fadeOut();
-    $('#project-section').slideIn()
     $('#education-section').fadeOut()
+    $('footer').fadeOut();
+    $('#project-section').fadeIn()
   }
   module.projectController = projectController;
 }(window));
