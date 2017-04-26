@@ -1,23 +1,26 @@
-'use strict';
+(function() {
 
-var projectObjs = [];
+  'use strict';
 
-function Projects(projects) {
-  this.title = projects.title,
-  this.author = projects.author,
-  this.url = projects.url,
-  this.date = projects.date
-}
+  let projectObjs = [];
 
-Projects.prototype.toHtml = function() {
-  var $newProject = $('.project1')
-}
+  function Projects(projects) {
+    this.title = projects.title,
+    this.author = projects.author,
+    this.url = projects.url,
+    this.date = projects.date
+  }
 
-projects.forEach(function(articleObject) {
-  projectObjs.push(new Projects(articleObject));
-});
+  Projects.prototype.toHtml = () => {
+    let $newProject = $('.project1')
+  }
 
-$("a.projects").each(function(index) {
-  var i = index;
-  $(this).attr('href', projectObjs[i].url);
-})
+  projects.forEach((articleObject) => {
+    projectObjs.push(new Projects(articleObject));
+  });
+
+  $("a.projects").each(function(index) {
+    let i = index;
+    $(this).attr('href', projectObjs[i].url).attr('target', '_blank')
+  });
+}())
