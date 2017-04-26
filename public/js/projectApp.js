@@ -17,7 +17,7 @@ projects.forEach((articleObject) => {
   projectObjs.push(new Projects(articleObject));
 });
 
-$("a.projects").each( =>(index) {
+$("a.projects").each(function(index) {
   let i = index;
-  $(this).attr('href', projectObjs[i].url);
-})
+  $(this).attr('href', projectObjs[i].url).attr('target', '_blank')
+});
