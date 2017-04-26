@@ -2,6 +2,7 @@
 
 let icon = $('.icon-menu');
 let ul = $('#navigation-list');
+
 ul.hide();
 icon.on('mouseover', () => {
     icon.hide();
