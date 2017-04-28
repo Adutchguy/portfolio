@@ -5,11 +5,11 @@
 
   repos.all = [];
 
-  repos.requestRepos = function(callback) {
+  repos.requestRepos = function() {
     $.get('/github/user/repos')
     .then(data => repos.all = data, err => console.error(err))
-    .then(callback);
   };
+  repos.requestRepos();
 
   repos.with = attr => repos.all.filter(repo => repo[attr]);
 
