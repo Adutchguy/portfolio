@@ -4,9 +4,9 @@
   const projectController = {};
 
   projectController.init = () => {
-    $('#about-me-section').fadeOut();
-    $('#education-section').fadeOut()
-    $('footer').fadeOut();
+    $('#about-me-section').hide();
+    $('#education-section').hide()
+    $('footer').hide();
     $('#project-section').fadeIn()
   }
   module.projectController = projectController;

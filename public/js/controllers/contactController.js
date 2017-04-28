@@ -4,9 +4,9 @@
   const contactController = {};
 
   contactController.init = () => {
-    $('#about-me-section').fadeOut();
-    $('#project-section').fadeOut()
-    $('#education-section').fadeOut()
+    $('#about-me-section').hide();
+    $('#project-section').hide()
+    $('#education-section').hide()
     $('footer').fadeIn();
   }
   module.contactController = contactController;

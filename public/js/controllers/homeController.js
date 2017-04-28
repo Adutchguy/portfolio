@@ -5,9 +5,9 @@
 
   homeController.init = () => {
     $('#about-me-section').fadeIn();
-    $('#project-section').fadeOut()
-    $('#education-section').fadeOut()
-    $('footer').fadeOut();
+    $('#project-section').hide()
+    $('#education-section').hide()
+    $('footer').hide();
   }
   module.homeController = homeController;
 }(window));

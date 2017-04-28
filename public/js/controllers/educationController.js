@@ -4,9 +4,9 @@
   const educationController = {};
 
   educationController.init = () => {
-    $('#about-me-section').fadeOut();
-    $('#project-section').fadeOut()
-    $('footer').fadeOut();
+    $('#about-me-section').hide();
+    $('#project-section').hide()
+    $('footer').hide();
     $('#education-section').fadeIn()
   }
   module.educationController = educationController;
