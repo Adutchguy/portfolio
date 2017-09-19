@@ -1,11 +1,11 @@
 import React from 'react';
 import {Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap';
 
-const NavDropdownApp = React.createClass({
+class NavDropdownApp extends React.Component{
   handleSelect(eventKey,event) {
     event.preventDefault();
     alert(`selected ${eventKey}`);
-  },
+  }
 
   render() {
     return (
@@ -22,7 +22,7 @@ const NavDropdownApp = React.createClass({
         </NavDropdown>
       </Nav>
     );
-  },
-});
+  }
+}
 
 export default NavDropdownApp;

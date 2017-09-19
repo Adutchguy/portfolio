@@ -1,27 +1,34 @@
-import React, { Component } from 'react';
-import {Grid,Jumbotron} from 'react-bootstrap';
+import React from 'react';
+
+import CodeWarsContainer from '../codewars';
 import NavDropdownApp from '../nav';
 import PageHeaderApp from '../header';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>
 
-        <NavDropdownApp />
+        <NavDropdownApp className='app-nav'/>
 
-        <PageHeaderApp />
+        <PageHeaderApp className='app-header' />
 
-        <Jumbotron>
+        <div className='app-left'>
+          <CodeWarsContainer />
+        </div>
 
-          <Grid>
+        <div className='app-middle'>
 
-            <h1>Portfolio</h1>
+        </div>
 
-            <p>This is Michael's portfolio.</p>
+        <div className='app-right'>
 
-          </Grid>
-        </Jumbotron>
+        </div>
+
+        <footer className='app-footer'>
+
+        </footer>
+
       </div>
     );
   }
