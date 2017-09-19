@@ -1,0 +1,27 @@
+@import "../../styles/_vars.scss";
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+nav {
+  top: 6%;
+  left: 1%;
+  width: 5%;
+  position: absolute;
+  &:hover{
+    transition: .3s;
+    opacity: .85;
+  }
+  .nav-select{
+    text-align: center;
+    background: $color-primary;
+    width: 100%;
+    transition: .3s;
+    display: block;
+    box-shadow: 1px 1px 4px $color-primary;
+    border-radius: 15px;
+  }
+}

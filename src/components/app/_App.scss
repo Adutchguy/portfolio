@@ -1,0 +1,27 @@
+h1{
+  display: none;
+}
+
+.app-left{
+  width: 25%;
+  float: right;
+  border: 1px solid blue;
+}
+
+.app-middle{
+  width: 50%;
+  float: right;
+  border: 1px solid green;
+}
+
+.app-right{
+  float: right;
+  width: 25%;
+  border: 1px solid orange;
+}
+
+.app-footer{
+  width: 100%;
+  clear: both;
+  border: 1px solid red;
+}
