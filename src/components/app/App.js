@@ -1,6 +1,4 @@
 import React from 'react';
-
-import CodeWarsContainer from '../codewars';
 import NavDropdownApp from '../nav';
 import PageHeaderApp from '../header';
 
@@ -14,19 +12,19 @@ class App extends React.Component {
         <PageHeaderApp className='app-header' />
 
         <div className='app-left'>
-          <CodeWarsContainer />
+          app left
         </div>
 
         <div className='app-middle'>
-
+          app middle
         </div>
 
         <div className='app-right'>
-
+          app right
         </div>
 
         <footer className='app-footer'>
-
+          footer
         </footer>
 
       </div>
