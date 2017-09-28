@@ -1,0 +1,36 @@
+@import "../../styles/_vars.scss";
+
+.about-body{
+  width: 100%;
+  .about-header{
+    width: 100%;
+    height: 27.5vw;
+    position: relative;
+    .about-header-div{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .about-header-div-img{
+        width: 100%;
+        position: absolute;
+        top: 0;
+      }
+      .about-header-img-inner-div{
+        position: absolute;
+        background: rgba(4, 4, 4, 0.63);
+        bottom: 0;
+        .about-name{
+          color: $color-white;
+          text-align: center;
+        }
+        .about-role{
+          color: $color-white;
+          text-align: center;
+        }
+      }
+    }
+  }
+  main{
+
+  }
+}
