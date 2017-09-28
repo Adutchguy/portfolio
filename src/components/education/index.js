@@ -6,17 +6,24 @@ class Education extends React.Component {
   render() {
     return (
       <div>
-        <body className='education-body'>
+        <div className='education-body'>
           <header className='education-header'>
             <div>
+              <h2> Education </h2>
             </div>
           </header>
 
           <main className='education-main'>
-            <div>
+            <div className='education-main-div'>
+              <ul className='education-main-div-ul'>
+                <li className='education-main-div-ul-li'>
+                  <h4> CODE FELLOWS </h4>
+                  <p>Attended - <b>From: </b></p>
+                </li>
+              </ul>
             </div>
           </main>
-        </body>
+        </div>
       </div>
     );
   }

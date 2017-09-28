@@ -6,7 +6,7 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <body className='about-body'>
+        <div className='about-body'>
           <header className='about-header'>
             <div className='about-header-div'>
               <img
@@ -41,7 +41,7 @@ class About extends React.Component {
 
 
           </main>
-        </body>
+        </div>
       </div>
     );
   }

@@ -1,1 +1,24 @@
 @import "../../styles/_vars.scss";
+
+.education-body{
+  background: $color-primary;
+  height: 100%;
+  .education-header{
+    h2{
+
+    }
+  }
+  .education-main{
+    .education-main-div{
+      .education-main-div-ul{
+        margin: 0;
+        padding: 0;
+        .education-main-div-ul-li{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+      }
+    }
+  }
+}

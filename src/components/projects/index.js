@@ -6,17 +6,19 @@ class Projects extends React.Component {
   render() {
     return (
       <div>
-        <body className='projects-body'>
+        <div className='projects-body'>
           <header className='projects-header'>
             <div>
+              header of projects component
             </div>
           </header>
 
           <main className='projects-main'>
             <div>
+              main of projects component
             </div>
           </main>
-        </body>
+        </div>
       </div>
     );
   }

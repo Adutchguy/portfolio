@@ -1,14 +1,22 @@
+// Primary colors
+
 $color-primary: #d4d4d4;
 $color-secondary: #fff;
 $color-accent: #E9CE00;
-$color-error: #ff777a;
-$color-success: #207e22;
+
+// Generic colors
 $color-white: #fff;
-$color-white-header: rgba(#ffffff, 0.16);
 $color-black: #000;
 $color-lightgrey: #B5BAC3;
 $color-grey: #7A7D84;
 $color-darkgrey: #4e4f52;
+
+// Feedback colors
+$color-error: #ff777a;
+$color-success: #207e22;
+
+// Componenet specific colors
+$color-white-header: rgba(#ffffff, 0.16);
 
 $pad: 0.5em;
 

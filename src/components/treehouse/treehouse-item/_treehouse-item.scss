@@ -1,0 +1,19 @@
+@import "../../../styles/_vars.scss";
+
+.treehouse-ul{
+  width: 100%;
+  .treehouse-ul-li{
+    display: inline-block;
+    width: 50%;
+    list-style: none;
+    padding: 5%;
+    margin: 0;
+    h6{
+      text-align: center;
+      font-weight: bold;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
