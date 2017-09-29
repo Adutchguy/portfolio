@@ -7,9 +7,11 @@ class Treehouse extends React.Component {
 
   render() {
     return (
-      <div>
+      <div onClick={this.props.handleModalClickEvent} className='treehouse'>
         <div className='treehouse-body'>
-          <TreehouseItems />
+          <TreehouseItems
+            badges={this.props.badges}
+          />
         </div>
       </div>
     );

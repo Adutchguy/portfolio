@@ -1,1 +1,20 @@
 @import "../../styles/_vars.scss";
+
+.treehouse{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $color-modal-shade;
+  z-index: 1;
+  .treehouse-body{
+    margin: 5vw auto 0 auto;
+    width: 60%;
+    height: 80%;
+    overflow: scroll;
+    background: $color-primary;
+    z-index: 99;
+    box-shadow: $modal-shadowing;
+    border-radius: 10px 0px 0px 0px;;
+  }
+}

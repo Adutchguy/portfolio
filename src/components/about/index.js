@@ -31,7 +31,7 @@ class About extends React.Component {
               <hr/>
 
               <h4> What Value I Bring:</h4>
-              <p>  </p>
+              <p> I believe the greatest value I bring to any organization is my love of learning. I know what I don't know which allows me to quickly identify what I need to learn in order to excel at any given task. </p>
 
               <hr/>
 
