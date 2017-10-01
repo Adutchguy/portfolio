@@ -1,0 +1,35 @@
+@import "../../styles/_vars.scss";
+
+.projects-body{
+  text-align: center;
+  height: 39vw;
+  .projects-header{
+    position: relative;
+    height: 14%;
+    background: $color-primary;
+    h2{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .projects-main{
+    width: 100%;
+    height: 100%;
+    .projects-main-ul{
+      margin: 0;
+      padding: 0;
+      .projects-main-ul-li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+      .projects-main-ul-li-h4{
+
+      }
+    }
+  }
+}

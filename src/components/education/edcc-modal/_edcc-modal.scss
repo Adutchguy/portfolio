@@ -1,0 +1,33 @@
+@import "../../../styles/_vars.scss";
+
+.edcc-modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $color-modal-shade;
+  z-index: 1;
+  .edcc-modal-body{
+    h3{
+      text-align: center;
+      margin: 0;
+      padding: 2% 0;
+      background: $color-accent;
+      font-weight: bold;
+      border-radius: 10px 0 0 0;
+    }
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 5vw auto 0 auto;
+    width: 60%;
+    height: 70%;
+    background: $color-primary;
+    z-index: 99;
+    box-shadow: $modal-shadowing;
+    border-radius: 10px 0px 0px 10px;
+    ul{
+      padding: 0 2%;
+      margin: 0;
+    }
+  }
+}

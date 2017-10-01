@@ -1,0 +1,59 @@
+@import "../../styles/_vars.scss";
+
+.about-body{
+  h2{
+    height: 5.45vw;
+    margin: 0;
+    padding: 1.5vw 0;
+    text-align: center;
+    background: $color-accent;
+  }
+  width: 100%;
+  height: 100%;
+  .about-header{
+    width: 100%;
+    height: 27.5vw;
+    position: relative;
+    .about-header-div{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .about-header-div-img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+      .about-header-img-inner-div{
+        height: 25%;
+        width: 100%;
+        position: absolute;
+        background: rgba(4, 4, 4, 0.63);
+        bottom: 0;
+        .about-name{
+          color: $color-white;
+          text-align: center;
+          margin: 1vw 0;
+        }
+        .about-role{
+          color: $color-white;
+          text-align: center;
+        }
+      }
+    }
+  }
+  main{
+    padding: 0 2%;
+    background: $color-primary;
+    text-align: center;
+    div{
+      h4:first-of-type{
+        padding: 1.5vw 0;
+        margin: 0;
+      }
+      p{
+      }
+    }
+
+  }
+}

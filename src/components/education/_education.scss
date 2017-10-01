@@ -1,0 +1,36 @@
+@import "../../styles/_vars.scss";
+
+.education-body{
+  height: 100%;
+  .education-header{
+    h2{
+      background: $color-accent;
+      height: 5.5vw;
+      margin: 0;
+      padding: 1.5vw 0;
+      text-align: center;
+      border-bottom: 1px solid #ececec;
+    }
+  }
+  .education-main{
+    padding: 0 2%;
+    background: $color-primary;
+    .education-main-div{
+      .education-main-div-ul{
+        margin: 0;
+        padding: 0;
+        .education-main-div-ul-li{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          a{
+            .code-fellows-h4{
+              padding: 1.5vw 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
