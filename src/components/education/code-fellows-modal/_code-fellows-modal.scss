@@ -1,0 +1,38 @@
+@import "../../../styles/_vars.scss";
+
+.code-fellows-modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $color-modal-shade;
+  z-index: 1;
+  .code-fellows-modal-body{
+    h3{
+      text-align: center;
+      margin: 0;
+      padding: 2% 0;
+      background: $color-accent;
+      font-weight: bold;
+      border-radius: 10px 10px 0 0;
+    }
+    margin: 5vw auto 0 auto;
+    width: 60%;
+    height: 70%;
+    background: $color-primary;
+    z-index: 99;
+    box-shadow: $modal-shadowing;
+    border-radius: 10px;
+    ul{
+      padding: 0 2%;
+      margin: 0;
+      li{
+        p{
+          strong{
+            font-size: 125%;
+          }
+        }
+      }
+    }
+  }
+}

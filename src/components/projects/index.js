@@ -16,8 +16,6 @@ class Projects extends React.Component {
           <main className='projects-main'>
             <ul className='projects-main-ul'>
               <li className='projects-main-ul-li'>
-                <iframe className='projects-main-ul-li-iframe' src='https://casehawk-frontend.herokuapp.com/'></iframe>
-                <h4 className='projects-main-ul-li-h4'>DETAILS</h4>
               </li>
             </ul>
           </main>

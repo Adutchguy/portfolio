@@ -3,27 +3,32 @@
 .SEO{
   display: none;
 }
-.app-left{
-  background: $color-primary;
-  width: 25%;
-  height: 100%;
-  float: left;
-}
+.app-main{
+  width: 100%;
+  .app-left{
+    background: $color-primary;
+    width: 25%;
+    height: 60vw;
+    float: left;
+  }
 
-.app-middle{
-  width: 50%;
-  float: left;
-}
+  .app-middle{
+    width: 50%;
+    float: left;
+    height: 60vw;
+  }
 
-.app-right{
-  background: $color-primary;
-  float: left;
-  height: 100%;
-  width: 25%;
+  .app-right{
+    background: $color-primary;
+    float: left;
+    height: 60vw;
+    width: 25%;
+  }
 }
 
 
 .app-footer{
+  background: $color-accent;
   width: 100%;
   clear: both;
 }
