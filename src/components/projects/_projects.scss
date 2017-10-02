@@ -18,18 +18,11 @@
   .projects-main{
     width: 100%;
     height: 100%;
-    .projects-main-ul{
-      margin: 0;
-      padding: 0;
-      .projects-main-ul-li{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-      }
-      .projects-main-ul-li-h4{
-
-      }
+    .slick-next{
+      right: 0;
+    }
+    .slick-prev{
+      left: 0;
     }
   }
 }
