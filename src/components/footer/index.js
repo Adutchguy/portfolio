@@ -19,7 +19,7 @@ class Footer extends React.Component {
           </li>
 
           <li className="icon-li icon2">
-            <a href="https://www.facebook.com/Adutchguy" target="_blank">
+            <a href="https://www.facebook.com/mimiller86" target="_blank">
               <Icon
                 icon='facebook'
                 className='icon-facebook'
@@ -37,7 +37,7 @@ class Footer extends React.Component {
           </li>
 
           <li className="icon-li icon4">
-            <a href="https://www.linkedin.com/in/Adutchguy" target="_blank">
+            <a href="https://www.linkedin.com/in/mimiller86/" target="_blank">
               <Icon
                 icon='linkedin'
                 className='icon-linkedin'
