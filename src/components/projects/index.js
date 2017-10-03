@@ -9,20 +9,20 @@ class Projects extends React.Component {
     super(props);
     this.state = {
       projectNames: ['one','two','three'],
+      settings: {
+        arrows: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+      },
     };
   }
 
   render() {
-    const settings = {
-      arrows: true,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 6000,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      pauseOnHover: true,
-    };
     return (
       <div>
         <div className='projects-body'>
@@ -33,7 +33,7 @@ class Projects extends React.Component {
           </header>
 
           <main className='projects-main'>
-            <Slider {...settings}>
+            <Slider {...this.state.settings}>
               <div>
                 <Project
                   projectName={this.state.projectNames[0]}

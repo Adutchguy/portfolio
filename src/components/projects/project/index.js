@@ -11,9 +11,15 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>{this.props.projectName}</h3>
-        <img src={'http://via.placeholder.com/350x150'} />
+      <div className='project'>
+        <header className='project-header'>
+          <img  className='project-header-img' src={'http://via.placeholder.com/200X200'} />
+        </header>
+        <div className='project-details'>
+          <h3 className='project-details-h3'>{this.props.projectName}</h3>
+
+        </div>
+
       </div>
     );
   }
