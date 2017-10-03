@@ -67,7 +67,6 @@ class App extends React.Component {
 
 
   render() {
-    console.log('__STATE__', this.state);
     return (
       <div className='app'>
         <h1 className='SEO'> ReactJS,JavaScript,NodeJS,Node,react,html,css,sass,scss,express,html5,css3,loops,arrays,michael,miller,d,dean,software,web,developer,front,end,front-end,back-end,Michael Miller,Michael D Miller </h1>
