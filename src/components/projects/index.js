@@ -18,6 +18,9 @@ class Projects extends React.Component {
         slidesToShow: 1,
         slidesToScroll: 1,
         pauseOnHover: true,
+        draggable: false,
+        swipe: false,
+        adaptiveHeight: true,
       },
     };
   }
@@ -53,6 +56,7 @@ class Projects extends React.Component {
               </div>
             </Slider>
           </main>
+
         </div>
       </div>
     );
