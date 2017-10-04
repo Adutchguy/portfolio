@@ -1,8 +1,10 @@
 {
   "name": "portfolio",
+  "email": "mdm_8@hotmail.com",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
+  "license" : "MIT",
   "dependencies": {
     "ajv-keywords": "^2.1.0",
     "autoprefixer": "7.1.2",

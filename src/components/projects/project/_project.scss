@@ -6,8 +6,9 @@
   .project{
     height: 100%;
     position: relative;
+
     .project-header{
-      height: 5.5%;
+      height: 15%;
       background: $color-grey;
       position: relative;
       .project-header-h2{
@@ -20,10 +21,31 @@
         padding: 0;
       }
     }
+
     .project-details{
       position: relative;
-      p{
-
+      height: 85%;
+      .project-details-li{
+        height: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 0 7%;
+        div{
+          margin: 5% 0;
+        }
+        h5{
+          strong{
+            font-size: 110%;
+          }
+          display: inline;
+          margin: 0;
+          padding: 0;
+        }
+        a,p{
+          display: inline;
+          margin-left: 1%;
+          font-size: 125%;
+        }
       }
     }
   }
