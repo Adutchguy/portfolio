@@ -10,9 +10,12 @@ em { font-style: italic; }
 strong { font-weight: bold; }
 
 body {
-  background: $color-white;
+  background: $color-lightgrey;
   // seting the size of ems on the page
   font-size: 1vw;
+  width: 100vw;
+  height: 133.5vw;
+  position: relative;
 }
 
 blockquote {

@@ -1,12 +1,20 @@
 @import "../../styles/_vars.scss";
 
 .about-body{
-  h2{
-    height: 5.45vw;
-    margin: 0;
-    padding: 1.5vw 0;
-    text-align: center;
+  height: 100%;
+  .about-body-div{
+    height: 5.5%;
+    width: 100%;
     background: $color-accent;
+    position: relative;
+    h2{
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      text-align: center
+    }
   }
   width: 100%;
   height: 100%;

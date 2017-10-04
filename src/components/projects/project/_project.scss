@@ -1,1 +1,30 @@
 @import "../../../styles/_vars.scss";
+
+.slick-slide{
+  height: 100%;
+  position: relative;
+  .project{
+    height: 100%;
+    position: relative;
+    .project-header{
+      height: 5.5%;
+      background: $color-grey;
+      position: relative;
+      .project-header-h2{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .project-details{
+      position: relative;
+      p{
+
+      }
+    }
+  }
+}

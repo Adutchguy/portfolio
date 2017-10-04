@@ -15,7 +15,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reposToRequest: ['portfolio', 'ibcf-music-frontend', 'ibcf-music-backend', 'casehawk-frontend', 'casehawk-backend'],
       treehouseModalIsOpen: false,
       edccModalIsOpen: false,
       codeFellowsModalIsOpen: false,
@@ -23,7 +22,6 @@ class App extends React.Component {
       githubRepos: [],
     };
     this.treehouseRequest = this.treehouseRequest.bind(this);
-    this.githubRepoRequest = this.githubRepoRequest.bind(this);
     this.handleTreehouseModalClickEvent = this.handleTreehouseModalClickEvent.bind(this);
     this.handleEdccModalClickEvent = this.handleEdccModalClickEvent.bind(this);
     this.handleCodeFellowsModalClickEvent = this.handleCodeFellowsModalClickEvent.bind(this);
@@ -37,20 +35,9 @@ class App extends React.Component {
       .catch(err => console.error(err));
   }
 
-  githubRepoRequest(repoName) {
-    superagent('get', `${process.env.REACT_APP_GITHUB_URL}${repoName}`)
-      .set({'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`})
-      .then((res) => {
-        this.setState({github: [...this.state.githubRepos, res.body]});
-      })
-      .catch(err => console.error(err));
-  }
-
   componentWillMount(){
     this.treehouseRequest();
-    this.state.reposToRequest.forEach(repoName => this.githubRepoRequest(repoName));
   }
-
 
   handleTreehouseModalClickEvent(e) {
     e.preventDefault();
@@ -78,7 +65,9 @@ class App extends React.Component {
           </div>
 
           <div className='app-middle'>
-            <Projects />
+            <Projects
+              githubRepos={this.state.githubRepos}
+            />
           </div>
 
           <div className='app-right'>

@@ -2,24 +2,42 @@
 
 .projects-body{
   text-align: center;
-  height: 60vw;
+  height: 100%;
   .projects-header{
     position: relative;
-    height: 9%;
-    background: $color-primary;
+    width: 100%;
+    height: 5.5%;
+    background: $color-accent2;
     h2{
       position: absolute;
-      top: 50%;
+      top: 45%;
       transform: translateY(-50%);
       margin: 0;
       padding: 0;
     }
+    p{
+      position: absolute;
+      bottom: 0;
+      transform: translateX(-50%);
+      left: 50%;
+      margin: 0;
+      padding: 0;
+      a{
+        display: inline;
+        text-decoration: none;
+      }
+    }
   }
   .projects-main{
+    background: $color-lightgrey;
     width: 100%;
-    height: 100%;
+    height: 94.5%;
     z-index: 0;
     .slick-slider{
+      height: 100%;
+      .slick-track{
+        height: 100%;
+      }
       .slick-next{
         height: 4vw;
         width: 4vw;
@@ -31,6 +49,7 @@
         }
       }
       .slick-list{
+        height: 100%;
       }
       .slick-prev{
         height: 4vw;
