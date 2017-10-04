@@ -9,41 +9,62 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reposToRequest: ['portfolio', 'ibcf-music-frontend', 'ibcf-music-backend', 'casehawk-frontend', 'casehawk-backend'],
+      reposToRequest: [
+        {
+          name: 'Adutchguy/portfolio',
+          deployed_url: 'https://michael-miller-portfolio.herokuapp.com/',
+        },
+        {
+          name: 'Adutchguy/ibcf-music-frontend',
+          deployed_url: 'https://ibcf.herokuapp.com/',
+        },
+        {
+          name: 'Adutchguy/ibcf-music-backend',
+        },
+        {
+          name: 'vagabond0079/casehawk-frontend',
+          deployed_url: 'https://casehawk-frontend.herokuapp.com/',
+        },
+        {
+          name: 'vagabond0079/casehawk-backend',
+        },
+      ],
       githubRepos: [],
       settings: {
+        slidesToShow: 2,
         arrows: true,
         infinite: true,
         autoplay: false,
         autoplaySpeed: 6000,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
         pauseOnHover: true,
         draggable: false,
         swipe: false,
       },
     };
-    this.githubRepoRequest = this.githubRepoRequest.bind(this);
+    this.githubAllRepoRequest = this.githubAllRepoRequest.bind(this);
   }
 
-  githubRepoRequest(repoName) {
-    superagent('get', `${process.env.REACT_APP_GITHUB_URL}${repoName}`)
+  githubAllRepoRequest() {
+    superagent('get', `${process.env.REACT_APP_GITHUB_URL}`)
       .set({'Authorization': `token ${process.env.REACT_APP_GITHUB_TOKEN}`})
       .then((res) => {
-        this.setState({
-          githubRepos: [...this.state.githubRepos, res.body],
-        });
+        res.body.filter(repo =>
+          this.state.reposToRequest.map(item => {return item.name;})
+            .includes(repo.full_name)
+            ? this.setState({githubRepos: [...this.state.githubRepos, repo]})
+            : null
+        );
       })
       .catch(err => console.error(err));
   }
 
   componentWillMount() {
-    this.state.reposToRequest.forEach(repoName => this.githubRepoRequest(repoName));
+    this.githubAllRepoRequest();
   }
 
   render() {
-    console.log(this.state.githubRepos);
+    console.log(this.state);
     return (
       <div className='projects-body'>
         <div className='projects-body'>
@@ -61,6 +82,7 @@ class Projects extends React.Component {
                   <div key={index}>
                     <Project
                       githubRepo={repo}
+                      reposToRequest={this.state.reposToRequest}
                     />
                   </div>
                 );

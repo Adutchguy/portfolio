@@ -34,17 +34,24 @@
     height: 94.5%;
     z-index: 0;
     .slick-slider{
-      height: 100%;
+      // adjusts height/width of entire projects slider
+      border-top: 2px solid $color-accent;
+      border-bottom: 2px solid $color-accent;
+      height: 40%;
       .slick-track{
         height: 100%;
       }
       .slick-next{
-        height: 4vw;
-        width: 4vw;
+        height: 100%;
+        width: 6%;
         right: 0;
+        bottom: 0;
         z-index: 1;
+        &:hover{
+          background: $color-white-header;
+        }
         &:before{
-          font-size: 4vw;
+          font-size: 3vw;
           position: relative;
         }
       }
@@ -52,12 +59,16 @@
         height: 100%;
       }
       .slick-prev{
-        height: 4vw;
-        width: 4vw;
+        height: 100%;
+        width: 6%;
+        bottom: 0;
         left: 0;
         z-index: 1;
+        &:hover{
+          background: $color-white-header;
+        }
         &:before{
-          font-size: 4vw;
+          font-size: 3vw;
         }
       }
     }
