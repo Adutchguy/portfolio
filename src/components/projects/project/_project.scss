@@ -1,1 +1,22 @@
 @import "../../../styles/_vars.scss";
+
+.slick-active{
+  height: 100%; 
+  .project{
+    height: 100%;
+    .project-header{
+      height: 5.5%;
+      background: $color-lightgrey;
+      a{
+        h2{
+
+        }
+      }
+    }
+    .project-details{
+      p{
+
+      }
+    }
+  }
+}

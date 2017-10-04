@@ -5,9 +5,11 @@ class About extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='about-body'>
         <div className='about-body'>
-          <h2> A Little About Myself </h2>
+          <div className='about-body-div'>
+            <h2> A Little About Myself </h2>
+          </div>
           <header className='about-header'>
             <div className='about-header-div'>
               <img

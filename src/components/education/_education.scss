@@ -1,15 +1,24 @@
 @import "../../styles/_vars.scss";
 
 .education-body{
+  width: 100%;
   height: 100%;
   .education-header{
-    h2{
+    height: 5.5%;
+    div{
+      position: relative;
+      height: 100%;
+      width: 100%;
       background: $color-accent;
-      height: 5.5vw;
-      margin: 0;
-      padding: 1.5vw 0;
-      text-align: center;
       border-bottom: 1px solid #ececec;
+    }
+    h2{
+      position: absolute;
+      transform: translate(-50%,-50%);
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      text-align: center;
     }
   }
   .education-main{
