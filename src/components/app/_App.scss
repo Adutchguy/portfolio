@@ -31,11 +31,10 @@
     }
   }
   .app-footer{
-    background: $color-accent;
+    position: fixed;
     height: 8%;
     width: 100%;
     clear: both;
-    position: absolute;
     bottom: 0;
   }
 }

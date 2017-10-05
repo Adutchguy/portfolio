@@ -4,7 +4,7 @@ import superagent from 'superagent';
 
 import Header from '../header';
 import About from '../about';
-import Footer from '../footer';
+import Contact from '../contact';
 import Projects from '../projects';
 import Education from '../education';
 import TreehouseModal from '../education/treehouse-modal';
@@ -80,7 +80,7 @@ class App extends React.Component {
         </main>
 
         <footer className='app-footer'>
-          <Footer />
+          <Contact />
         </footer>
 
         {this.state.treehouseModalIsOpen
