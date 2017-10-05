@@ -85,7 +85,7 @@ class Project extends React.Component {
                 && item.deployed_url) {
                   return  <div  className='view-deployed' key={index}>
                     <h5><strong> View Deployed Project: </strong></h5>
-                    <a target href={item.deployed_url}><p> Click Here </p></a>
+                    <a target='_blank' href={item.deployed_url}><p> Click Here </p></a>
                   </div>;
                 }
               })
