@@ -1,40 +1,21 @@
 import './_nav.scss';
 import React from 'react';
+import Icon from '../icon';
 
 class Nav extends React.Component{
-  handleSelect(event){
-    event.preventDefault();
-    console.log(event.target.value);
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicked: false,
+    };
   }
 
   render() {
     return (
       <nav>
-        <select
-          onChange={this.handleSelect}
-          className='nav-select'
-          title="Dropdown"
-          id="nav-dropdown"
-        >
-
-          <option
-            selected
-            className='nav-option'
-          >Where To?</option>
-
-          <option
-            className='nav-option'
-          >Another action</option>
-
-          <option
-            className='nav-option'
-          >Something else here</option>
-
-          <option
-            className='nav-option'
-          >Separated link</option>
-
-        </select>
+        <Icon
+          icon='menu'
+        />
       </nav>
     );
   }
