@@ -1,9 +1,9 @@
-import './_footer.scss';
+import './_contact.scss';
 import React, { Component } from 'react';
 
 import Icon from '../icon';
 
-class Footer extends React.Component {
+class Contact extends React.Component {
 
   render() {
     return (
@@ -51,4 +51,4 @@ class Footer extends React.Component {
 
 }
 
-export default Footer;
+export default Contact;
