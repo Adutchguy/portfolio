@@ -9,10 +9,10 @@ class EdccModal extends React.Component {
   }
 
   handleOutsideClick(e) {
-    if (e.target.parentNode.className !== 'app') {
+    console.log(e.target.className);
+    if (e.target.className !== 'edcc-modal') {
       return;
     }
-
     this.props.handleEdccModalClickEvent(e);
   }
 

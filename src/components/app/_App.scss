@@ -4,34 +4,36 @@
   display: none;
 }
 
+
+// Mobile scss
 .app{
   position: relative;
   height: 100%;
   width: 100%;
-  .app-mobile{
+  .mobile-app{
     position: relative;
     height: 100%;
     width: 100%;
-    .app-main{
+    .mobile-app-main{
       width: 100%;
       height: 84%;
-      .app-left{
+      .mobile-app-top{
         background: $color-primary;
         width: 100%;
       }
 
-      .app-middle{
+      .mobile-app-middle{
         width: 100%;
         height: 100%;
       }
 
-      .app-right{
+      .mobile-app-bottom{
         background: $color-primary;
         height: 100%;
         width: 100%;
       }
     }
-    .app-contact{
+    .mobile-app-contact{
       position: fixed;
       height: 8%;
       width: 100%;
@@ -41,8 +43,9 @@
   }
 }
 
+// Standard scss
 @media only screen and (min-width: 769px) {
-  .app-standard{
+  .standard-app{
     position: relative;
     height: 100%;
     width: 100%;

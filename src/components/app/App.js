@@ -1,11 +1,12 @@
 import './_App.scss';
 import React from 'react';
 import superagent from 'superagent';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
-import NavIcon from '../nav-icon';
 import About from '../about';
 import Header from '../header';
 import Contact from '../contact';
+import NavIcon from '../nav-icon';
 import Projects from '../projects';
 import Education from '../education';
 import EdccModal from '../education/edcc-modal';
@@ -78,38 +79,55 @@ class App extends React.Component {
       <div className='app'>
         <h1 className='SEO'> ReactJS,JavaScript,NodeJS,Node,react,html,css,sass,scss,express,html5,css3,loops,arrays,michael,miller,d,dean,software,web,developer,front,end,front-end,back-end,Michael Miller,Michael D Miller </h1>
 
-        {/* Here we use a ternary to determine that the mobile version of the application will be displayed if the window width is less than or equal to 768px*/}
+        {/* Here we use a ternary operator to determine that the mobile version of the application will be displayed if the window width is less than or equal to 768px*/}
 
         {this.state.windowWidth <= 768 ?
-          <div className='app-mobile'>
+          <div className='mobile-app'>
+
 
             <Header />
 
-
-            <main className='app-main'>
-              <div className='app-left'>
-                <About />
-              </div>
-
-
-              <div className='app-middle'>
-                <Projects
-                  githubRepos={this.state.githubRepos}
+            {/*Here I am using a Router to show only the sections of the page that are selected from the nav menu.*/}
+            <Router
+              basename='/'
+            >
+              <main className='mobile-app-main'>
+                <Route exact path='/'
+                  render={() =>
+                    <div className='mobile-app-top'>
+                      <About />
+                    </div>
+                  }
                 />
-              </div>
 
 
-              <div className='app-right'>
-                <Education
-                  handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
-                  handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
-                  handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+                <Route path='/projects'
+                  render={() =>
+                    <div className='mobile-app-middle'>
+                      <Projects
+                        githubRepos={this.state.githubRepos}
+                      />
+                    </div>
+                  }
                 />
-              </div>
-            </main>
+
+                <Route path='/Education'
+                  render={() =>
+                    <div className='mobile-app-bottom'>
+                      <Education
+                        handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
+                        handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
+                        handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+                      />
+                    </div>
+                  }
+                />
+
+              </main>
+            </Router>
 
 
-            <div className='app-contact'>
+            <div className='mobile-app-contact'>
               <Contact />
             </div>
 
@@ -120,7 +138,6 @@ class App extends React.Component {
                 handleNavIconClickEvent={this.handleNavIconClickEvent}
               />
             }
-
 
             {this.state.treehouseModalIsOpen
               ?
@@ -147,15 +164,16 @@ class App extends React.Component {
               :
               null
             }
+
           </div>
 
-          /*Here we render the normal application because the ternary returned false.*/
+          /*Here we render the normal application because the ternary operator returned false.*/
 
           :
 
 
 
-          <div className='app-standard'>
+          <div className='standard-app'>
             <Header />
 
 
