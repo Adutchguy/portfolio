@@ -64,7 +64,6 @@ class Projects extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className='projects-body'>
         <div className='projects-body'>

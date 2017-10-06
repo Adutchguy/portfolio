@@ -2,19 +2,21 @@ import './_App.scss';
 import React from 'react';
 import superagent from 'superagent';
 
-import Header from '../header';
+import NavIcon from '../nav-icon';
 import About from '../about';
+import Header from '../header';
 import Contact from '../contact';
 import Projects from '../projects';
 import Education from '../education';
-import TreehouseModal from '../education/treehouse-modal';
 import EdccModal from '../education/edcc-modal';
+import TreehouseModal from '../education/treehouse-modal';
 import CodeFellowsModal from '../education/code-fellows-modal';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      navIsOpen: false,
       treehouseModalIsOpen: false,
       edccModalIsOpen: false,
       codeFellowsModalIsOpen: false,
@@ -25,6 +27,7 @@ class App extends React.Component {
     this.handleTreehouseModalClickEvent = this.handleTreehouseModalClickEvent.bind(this);
     this.handleEdccModalClickEvent = this.handleEdccModalClickEvent.bind(this);
     this.handleCodeFellowsModalClickEvent = this.handleCodeFellowsModalClickEvent.bind(this);
+    this.handleNavIconClickEvent = this.handleNavIconClickEvent.bind(this);
   }
 
   treehouseRequest() {
@@ -50,6 +53,10 @@ class App extends React.Component {
   handleCodeFellowsModalClickEvent(e) {
     e.preventDefault();
     this.setState({codeFellowsModalIsOpen: !this.state.codeFellowsModalIsOpen});
+  }
+  handleNavIconClickEvent(e) {
+    e.preventDefault();
+    this.setState({navIsOpen: !this.state.navIsOpen});
   }
 
 
@@ -82,6 +89,13 @@ class App extends React.Component {
         <footer className='app-footer'>
           <Contact />
         </footer>
+
+        {this.state.navIsOpen ?
+          null :
+          <NavIcon
+            handleNavIconClickEvent={this.handleNavIconClickEvent}
+          />
+        }
 
         {this.state.treehouseModalIsOpen
           ?

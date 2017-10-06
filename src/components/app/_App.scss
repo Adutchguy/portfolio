@@ -3,6 +3,7 @@
 .SEO{
   display: none;
 }
+
 .app{
   position: relative;
   height: 100%;
@@ -12,22 +13,18 @@
     height: 84%;
     .app-left{
       background: $color-primary;
-      width: 25%;
-      height: 100%;
-      float: left;
+      width: 100%;
     }
 
     .app-middle{
-      width: 50%;
-      float: left;
+      width: 100%;
       height: 100%;
     }
 
     .app-right{
       background: $color-primary;
-      float: left;
       height: 100%;
-      width: 25%;
+      width: 100%;
     }
   }
   .app-footer{
@@ -36,5 +33,43 @@
     width: 100%;
     clear: both;
     bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .app{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .app-main{
+      width: 100%;
+      height: 84%;
+      .app-left{
+        background: $color-primary;
+        width: 25%;
+        height: 100%;
+        float: left;
+      }
+
+      .app-middle{
+        width: 50%;
+        float: left;
+        height: 100%;
+      }
+
+      .app-right{
+        background: $color-primary;
+        float: left;
+        height: 100%;
+        width: 25%;
+      }
+    }
+    .app-footer{
+      position: fixed;
+      height: 8%;
+      width: 100%;
+      clear: both;
+      bottom: 0;
+    }
   }
 }
