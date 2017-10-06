@@ -16,6 +16,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      windowWidth: window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth,
       navIsOpen: false,
       treehouseModalIsOpen: false,
       edccModalIsOpen: false,
@@ -28,6 +31,7 @@ class App extends React.Component {
     this.handleEdccModalClickEvent = this.handleEdccModalClickEvent.bind(this);
     this.handleCodeFellowsModalClickEvent = this.handleCodeFellowsModalClickEvent.bind(this);
     this.handleNavIconClickEvent = this.handleNavIconClickEvent.bind(this);
+    this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   treehouseRequest() {
@@ -58,70 +62,169 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({navIsOpen: !this.state.navIsOpen});
   }
+  handleWindowResize() {
+    var width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+    this.setState({windowWidth: width});
+  }
 
 
   render() {
+    window.onresize = this.handleWindowResize;
+
+    console.log(this.state.windowWidth);
     return (
       <div className='app'>
         <h1 className='SEO'> ReactJS,JavaScript,NodeJS,Node,react,html,css,sass,scss,express,html5,css3,loops,arrays,michael,miller,d,dean,software,web,developer,front,end,front-end,back-end,Michael Miller,Michael D Miller </h1>
 
-        <Header />
-        <main className='app-main'>
-          <div className='app-left'>
-            <About />
+        {/* Here we use a ternary to determine that the mobile version of the application will be displayed if the window width is less than or equal to 768px*/}
+
+        {this.state.windowWidth <= 768 ?
+          <div className='app-mobile'>
+
+            <Header />
+
+
+            <main className='app-main'>
+              <div className='app-left'>
+                <About />
+              </div>
+
+
+              <div className='app-middle'>
+                <Projects
+                  githubRepos={this.state.githubRepos}
+                />
+              </div>
+
+
+              <div className='app-right'>
+                <Education
+                  handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
+                  handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
+                  handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+                />
+              </div>
+            </main>
+
+
+            <div className='app-contact'>
+              <Contact />
+            </div>
+
+
+            {this.state.navIsOpen ?
+              null :
+              <NavIcon
+                handleNavIconClickEvent={this.handleNavIconClickEvent}
+              />
+            }
+
+
+            {this.state.treehouseModalIsOpen
+              ?
+              <TreehouseModal
+                badges={this.state.badges}
+                handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+              />
+              :
+              null
+            }
+            {this.state.edccModalIsOpen
+              ?
+              <EdccModal
+                handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
+              />
+              :
+              null
+            }
+            {this.state.codeFellowsModalIsOpen
+              ?
+              <CodeFellowsModal
+                handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
+              />
+              :
+              null
+            }
           </div>
 
-          <div className='app-middle'>
-            <Projects
-              githubRepos={this.state.githubRepos}
-            />
+          /*Here we render the normal application because the ternary returned false.*/
+
+          :
+
+
+
+          <div className='app-standard'>
+            <Header />
+
+
+            <main className='app-main'>
+              <div className='app-left'>
+                <About />
+              </div>
+
+
+              <div className='app-middle'>
+                <Projects
+                  githubRepos={this.state.githubRepos}
+                />
+              </div>
+
+
+              <div className='app-right'>
+                <Education
+                  handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
+                  handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
+                  handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+                />
+              </div>
+            </main>
+
+
+            <div className='app-contact'>
+              <Contact />
+            </div>
+
+
+            {this.state.navIsOpen ?
+              null :
+              <NavIcon
+                handleNavIconClickEvent={this.handleNavIconClickEvent}
+              />
+            }
+
+
+            {this.state.treehouseModalIsOpen
+              ?
+              <TreehouseModal
+                badges={this.state.badges}
+                handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
+              />
+              :
+              null
+            }
+            {this.state.edccModalIsOpen
+              ?
+              <EdccModal
+                handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
+              />
+              :
+              null
+            }
+            {this.state.codeFellowsModalIsOpen
+              ?
+              <CodeFellowsModal
+                handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
+              />
+              :
+              null
+            }
           </div>
-
-          <div className='app-right'>
-            <Education
-              handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
-              handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
-              handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
-            />
-          </div>
-        </main>
-
-        <footer className='app-footer'>
-          <Contact />
-        </footer>
-
-        {this.state.navIsOpen ?
-          null :
-          <NavIcon
-            handleNavIconClickEvent={this.handleNavIconClickEvent}
-          />
         }
 
-        {this.state.treehouseModalIsOpen
-          ?
-          <TreehouseModal
-            badges={this.state.badges}
-            handleTreehouseModalClickEvent = {this.handleTreehouseModalClickEvent}
-          />
-          :
-          null
-        }
-        {this.state.edccModalIsOpen
-          ?
-          <EdccModal
-            handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
-          />
-          :
-          null
-        }
-        {this.state.codeFellowsModalIsOpen
-          ?
-          <CodeFellowsModal
-            handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
-          />
-          :
-          null
-        }
+
+
       </div>
     );
   }

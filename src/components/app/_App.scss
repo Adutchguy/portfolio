@@ -8,36 +8,41 @@
   position: relative;
   height: 100%;
   width: 100%;
-  .app-main{
+  .app-mobile{
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 84%;
-    .app-left{
-      background: $color-primary;
+    .app-main{
       width: 100%;
-    }
+      height: 84%;
+      .app-left{
+        background: $color-primary;
+        width: 100%;
+      }
 
-    .app-middle{
-      width: 100%;
-      height: 100%;
-    }
+      .app-middle{
+        width: 100%;
+        height: 100%;
+      }
 
-    .app-right{
-      background: $color-primary;
-      height: 100%;
-      width: 100%;
+      .app-right{
+        background: $color-primary;
+        height: 100%;
+        width: 100%;
+      }
     }
-  }
-  .app-footer{
-    position: fixed;
-    height: 8%;
-    width: 100%;
-    clear: both;
-    bottom: 0;
+    .app-contact{
+      position: fixed;
+      height: 8%;
+      width: 100%;
+      clear: both;
+      bottom: 0;
+    }
   }
 }
 
 @media only screen and (min-width: 769px) {
-  .app{
+  .app-standard{
     position: relative;
     height: 100%;
     width: 100%;
