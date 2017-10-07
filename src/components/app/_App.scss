@@ -34,8 +34,7 @@
       }
     }
     .mobile-app-contact{
-      position: fixed;
-      height: 8%;
+      height: 15em;
       width: 100%;
       clear: both;
       bottom: 0;
@@ -44,36 +43,35 @@
 }
 
 // Standard scss
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
   .standard-app{
     position: relative;
     height: 100%;
     width: 100%;
-    .app-main{
+    .standard-app-main{
       width: 100%;
       height: 84%;
-      .app-left{
+      .standard-app-left{
         background: $color-primary;
         width: 25%;
         height: 100%;
         float: left;
       }
 
-      .app-middle{
+      .standard-app-middle{
         width: 50%;
         float: left;
         height: 100%;
       }
 
-      .app-right{
+      .standard-app-right{
         background: $color-primary;
         float: left;
         height: 100%;
         width: 25%;
       }
     }
-    .app-footer{
-      position: fixed;
+    .standard-app-contact{
       height: 8%;
       width: 100%;
       clear: both;

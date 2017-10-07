@@ -1,0 +1,29 @@
+@import '../../styles/_vars.scss';
+
+.nav-menu{
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  // width: auto;
+  background: rgba(251, 251, 251, 0.50);
+  border-radius: $corners;
+  display: block;
+  .nav-menu-ul{
+    margin: 0;
+    padding: 0;
+    li{
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a{
+        color: $color-black;
+        font-size: 7em;
+        &:hover{color: #3A6DB8;}
+      }
+    }
+    .nav-menu-ul-close-menu{
+      &:hover{fill: #3A6DB8;}
+    }
+  }
+}

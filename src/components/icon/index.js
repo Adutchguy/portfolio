@@ -15,8 +15,16 @@ class Icon extends React.Component {
 
   render() {
     return(
-      <svg className={this.props.className} width="50" height="50" viewBox="0 0 32 32">
-        <path d={this.state[this.props.icon]}></path>
+      <svg
+        className={this.props.className}
+        width={this.props.width ? this.props.width : '50'}
+        height={this.props.height ? this.props.height : '50'}
+        viewBox="0 0 32 32"
+        onClick={this.props.onClick ? this.props.onClick : null}
+      >
+        <path
+          d={this.state[this.props.icon]}
+        ></path>
       </svg>
     );
   }

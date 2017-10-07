@@ -8,7 +8,7 @@ class About extends React.Component {
       <div className='about-body'>
         <div className='about-body'>
           <div className='about-body-div'>
-            <h2> A Little About Myself </h2>
+            <h2 className='about-body-div-h2'> A Little About Myself </h2>
           </div>
           <header className='about-header'>
             <div className='about-header-div'>

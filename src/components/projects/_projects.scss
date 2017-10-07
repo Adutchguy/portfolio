@@ -6,9 +6,10 @@
   .projects-header{
     position: relative;
     width: 100%;
-    height: 5.5%;
+    height: 15em;
     background: $color-accent2;
     h2{
+      font-size: 8em;
       position: absolute;
       top: 45%;
       transform: translateY(-50%);
@@ -16,6 +17,7 @@
       padding: 0;
     }
     p{
+      font-size: 3.5em;
       position: absolute;
       bottom: 0;
       transform: translateX(-50%);
@@ -23,19 +25,21 @@
       margin: 0;
       padding: 0;
       a{
+        font-size: 1em;
         display: inline;
         text-decoration: none;
       }
     }
   }
   .projects-main{
+    overflow-y: scroll;
+    overflow-x: hidden;
     background: $color-lightgrey;
     width: 100%;
-    height: 94.5%;
     z-index: 0;
     .slick-slider{
       // adjusts height/width of entire projects slider
-      height: 60%;
+      height: 175em;
       .slick-track{
         height: 100%;
       }
@@ -49,7 +53,7 @@
           background: $color-white-header;
         }
         &:before{
-          font-size: 3vw;
+          font-size: 6vw;
           position: relative;
         }
       }
@@ -66,7 +70,71 @@
           background: $color-white-header;
         }
         &:before{
-          font-size: 3vw;
+          font-size: 6vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .projects-body{
+    text-align: center;
+    height: 100%;
+    .projects-header{
+      position: relative;
+      width: 100%;
+      height: 5.5%;
+      background: $color-accent2;
+      h2{
+        font-size: 2.5em;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .projects-main{
+      background: $color-lightgrey;
+      width: 100%;
+      height: 94.5%;
+      z-index: 0;
+      .slick-slider{
+        // adjusts height/width of entire projects slider
+        height: 60%;
+        .slick-track{
+          height: 100%;
+        }
+        .slick-next{
+          height: 100%;
+          width: 4.5%;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          &:hover{
+            background: $color-white-header;
+          }
+          &:before{
+            font-size: 2vw;
+            position: relative;
+          }
+        }
+        .slick-list{
+          height: 100%;
+        }
+        .slick-prev{
+          height: 100%;
+          width: 4.5%;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          &:hover{
+            background: $color-white-header;
+          }
+          &:before{
+            font-size: 2vw;
+          }
         }
       }
     }

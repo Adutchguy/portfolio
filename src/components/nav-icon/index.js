@@ -16,6 +16,8 @@ class Nav extends React.Component{
         <Icon
           icon='menu'
           className='nav-icon'
+          width='50'
+          height='50'
         />
       </nav>
     );

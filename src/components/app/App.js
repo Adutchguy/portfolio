@@ -3,6 +3,7 @@ import React from 'react';
 import superagent from 'superagent';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
+import Nav from '../nav';
 import About from '../about';
 import Header from '../header';
 import Contact from '../contact';
@@ -27,12 +28,13 @@ class App extends React.Component {
       badges: [],
       githubRepos: [],
     };
+    this.handleEscapeKey = this.handleEscapeKey.bind(this);
     this.treehouseRequest = this.treehouseRequest.bind(this);
-    this.handleTreehouseModalClickEvent = this.handleTreehouseModalClickEvent.bind(this);
-    this.handleEdccModalClickEvent = this.handleEdccModalClickEvent.bind(this);
-    this.handleCodeFellowsModalClickEvent = this.handleCodeFellowsModalClickEvent.bind(this);
-    this.handleNavIconClickEvent = this.handleNavIconClickEvent.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
+    this.handleNavIconClickEvent = this.handleNavIconClickEvent.bind(this);
+    this.handleEdccModalClickEvent = this.handleEdccModalClickEvent.bind(this);
+    this.handleTreehouseModalClickEvent = this.handleTreehouseModalClickEvent.bind(this);
+    this.handleCodeFellowsModalClickEvent = this.handleCodeFellowsModalClickEvent.bind(this);
   }
 
   treehouseRequest() {
@@ -51,18 +53,22 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({treehouseModalIsOpen: !this.state.treehouseModalIsOpen});
   }
+
   handleEdccModalClickEvent(e) {
     e.preventDefault();
     this.setState({edccModalIsOpen: !this.state.edccModalIsOpen});
   }
+
   handleCodeFellowsModalClickEvent(e) {
     e.preventDefault();
     this.setState({codeFellowsModalIsOpen: !this.state.codeFellowsModalIsOpen});
   }
+
   handleNavIconClickEvent(e) {
     e.preventDefault();
     this.setState({navIsOpen: !this.state.navIsOpen});
   }
+
   handleWindowResize() {
     var width = window.innerWidth
     || document.documentElement.clientWidth
@@ -70,22 +76,28 @@ class App extends React.Component {
     this.setState({windowWidth: width});
   }
 
+  handleEscapeKey(e) {
+    console.log(e);
+  }
+
 
   render() {
     window.onresize = this.handleWindowResize;
 
-    console.log(this.state.windowWidth);
     return (
       <div className='app'>
         <h1 className='SEO'> ReactJS,JavaScript,NodeJS,Node,react,html,css,sass,scss,express,html5,css3,loops,arrays,michael,miller,d,dean,software,web,developer,front,end,front-end,back-end,Michael Miller,Michael D Miller </h1>
 
-        {/* Here we use a ternary operator to determine that the mobile version of the application will be displayed if the window width is less than or equal to 768px*/}
 
-        {this.state.windowWidth <= 768 ?
+        {/* Here we use a ternary operator to determine that the mobile version of the application will be displayed if the window width is less than or equal to 1024px*/}
+
+
+        {this.state.windowWidth <= 1024 ?
           <div className='mobile-app'>
 
 
             <Header />
+
 
             {/*Here I am using a Router to show only the sections of the page that are selected from the nav menu.*/}
             <Router
@@ -106,10 +118,12 @@ class App extends React.Component {
                     <div className='mobile-app-middle'>
                       <Projects
                         githubRepos={this.state.githubRepos}
+                        windowWidth={this.state.windowWidth}
                       />
                     </div>
                   }
                 />
+
 
                 <Route path='/Education'
                   render={() =>
@@ -128,12 +142,16 @@ class App extends React.Component {
 
 
             <div className='mobile-app-contact'>
-              <Contact />
+              <Contact
+                class='mobile-contact'
+              />
             </div>
 
 
             {this.state.navIsOpen ?
-              null :
+              <Nav
+                handleNavIconClickEvent={this.handleNavIconClickEvent}
+              /> :
               <NavIcon
                 handleNavIconClickEvent={this.handleNavIconClickEvent}
               />
@@ -177,20 +195,20 @@ class App extends React.Component {
             <Header />
 
 
-            <main className='app-main'>
-              <div className='app-left'>
+            <main className='standard-app-main'>
+              <div className='standard-app-left'>
                 <About />
               </div>
 
 
-              <div className='app-middle'>
+              <div className='standard-app-middle'>
                 <Projects
                   githubRepos={this.state.githubRepos}
                 />
               </div>
 
 
-              <div className='app-right'>
+              <div className='standard-app-right'>
                 <Education
                   handleCodeFellowsModalClickEvent = {this.handleCodeFellowsModalClickEvent}
                   handleEdccModalClickEvent = {this.handleEdccModalClickEvent}
@@ -200,8 +218,10 @@ class App extends React.Component {
             </main>
 
 
-            <div className='app-contact'>
-              <Contact />
+            <div className='standard-app-contact'>
+              <Contact
+                class='standard-contact'
+              />
             </div>
 
 
