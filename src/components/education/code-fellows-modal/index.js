@@ -9,10 +9,9 @@ class CodeFellowsModal extends React.Component {
   }
 
   handleOutsideClick(e) {
-    if (e.target.parentNode.className !== 'app') {
+    if (e.target.className !== 'code-fellows-modal') {
       return;
     }
-
     this.props.handleCodeFellowsModalClickEvent(e);
   }
 

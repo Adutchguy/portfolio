@@ -1,6 +1,8 @@
 import './_about.scss';
 import React, { Component } from 'react';
 
+import Contact from '../contact';
+
 class About extends React.Component {
 
   render() {
@@ -8,7 +10,7 @@ class About extends React.Component {
       <div className='about-body'>
         <div className='about-body'>
           <div className='about-body-div'>
-            <h2> A Little About Myself </h2>
+            <h2 className='about-body-div-h2'> A Little About Myself </h2>
           </div>
           <header className='about-header'>
             <div className='about-header-div'>
@@ -31,7 +33,27 @@ class About extends React.Component {
 
               <h4> What Value I Bring:</h4>
               <p> I believe the greatest value I bring to any organization is my love of learning. I know what I don't know which allows me to quickly identify what I need to learn in order to excel at any given task. </p>
-              <p></p>
+
+              <hr/>
+
+              <div>
+                <h4> Volunteer Work:</h4>
+                <h5> International Bible Christian Fellowship </h5>
+                <h6> Music Ministry Coordinator </h6>
+                <p> Since 2005 I have served as the lead "tech guy" at my church in Lynnwood, WA. My primary service entails: planning, organizing, and often times participating in the weekly worship activities. </p>
+              </div>
+
+              <hr/>
+
+              <h4> Hobbies:</h4>
+              <p>Soccer, Music, PC Gaming, Home Improvement </p>
+
+              <hr/>
+            </div>
+            <div className='standard-app-contact'>
+              <Contact
+                class='standard-contact'
+              />
             </div>
           </main>
         </div>

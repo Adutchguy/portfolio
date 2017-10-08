@@ -1,5 +1,6 @@
 @import "../../../styles/_vars.scss";
 
+// Mobile
 .slick-slide{
   height: 100%;
   position: relative;
@@ -8,10 +9,11 @@
     position: relative;
 
     .project-header{
-      height: 15%;
+      height: 15em;
       background: $color-grey;
       position: relative;
       .project-header-h2{
+        font-size: 5em;
         position: absolute;
         transform: translate(-50%,-50%);
         top: 50%;
@@ -29,22 +31,93 @@
         height: 100%;
         text-align: left;
         margin: 0;
-        padding: 0 7%;
+        padding: 0 10%;
         div{
           margin: 5% 0;
         }
         h5{
           strong{
-            font-size: 110%;
+            font-size: 4em;
           }
           display: inline;
           margin: 0;
           padding: 0;
         }
-        a,p{
-          display: inline;
-          margin-left: 1%;
-          font-size: 125%;
+        p{
+          font-size: 5em;
+        }
+        a{
+          font-size: 5em;
+          p{
+            color: #4772B2;
+            font-weight: bold;
+            display: inline;
+            font-size: 1em;
+            &:hover{
+              font-size: 1.1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Standard
+@media only screen and (min-width: 1025px) {
+  .slick-slide{
+    height: 100%;
+    position: relative;
+    .project{
+      height: 100%;
+      position: relative;
+      .project-header{
+        height: 15%;
+        background: $color-grey;
+        position: relative;
+        .project-header-h2{
+          font-size: 2.5em;
+          position: absolute;
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .project-details{
+        position: relative;
+        height: 85%;
+        .project-details-li{
+          height: 100%;
+          text-align: left;
+          margin: 0;
+          padding: 0 10%;
+          div{
+            margin: 5% 0;
+          }
+          h5{
+            strong{
+              font-size: 110%;
+            }
+            display: inline;
+            margin: 0;
+            padding: 0;
+          }
+          a,p{
+            display: inline;
+            font-size: 125%;
+          }
+          a{
+            p{
+              color: #4772B2;
+              &:hover{
+                font-size: 100%;
+              }
+            }
+          }
         }
       }
     }

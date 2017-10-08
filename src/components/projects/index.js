@@ -30,16 +30,26 @@ class Projects extends React.Component {
         },
       ],
       githubRepos: [],
-      settings: {
+      standardSettings: {
         slidesToShow: 2,
         arrows: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 6000,
         speed: 500,
         pauseOnHover: true,
         draggable: false,
         swipe: false,
+      },
+      mobileSettings: {
+        slidesToShow: 1,
+        arrows: true,
+        infinite: true,
+        autoplay: false,
+        speed: 500,
+        pauseOnHover: true,
+        draggable: true,
+        swipe: true,
       },
     };
     this.githubAllRepoRequest = this.githubAllRepoRequest.bind(this);
@@ -64,19 +74,17 @@ class Projects extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className='projects-body'>
         <div className='projects-body'>
           <header className='projects-header'>
             <div>
               <h2>Projects</h2>
-              <p> (all information pulled straight from <a href={'https://developer.github.com/v3/'} target='_blank'>github API</a>) </p>
             </div>
           </header>
 
           <main className='projects-main'>
-            <Slider {...this.state.settings}>
+            <Slider {...this.props.windowWidth <= 1024 ? this.state.mobileSettings : this.state.standardSettings}>
               {this.state.githubRepos.map((repo,index) => {
                 return(
                   <div key={index}>

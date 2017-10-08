@@ -3,38 +3,73 @@
 .SEO{
   display: none;
 }
+
+
+// Mobile scss
 .app{
   position: relative;
   height: 100%;
   width: 100%;
-  .app-main{
+  .mobile-app{
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 84%;
-    .app-left{
-      background: $color-primary;
-      width: 25%;
-      height: 100%;
-      float: left;
-    }
+    .mobile-app-main{
+      width: 100%;
+      height: 84%;
+      .mobile-app-top{
+        background: $color-primary;
+        width: 100%;
+      }
 
-    .app-middle{
-      width: 50%;
-      float: left;
-      height: 100%;
-    }
+      .mobile-app-middle{
+        width: 100%;
+        height: 100%;
+      }
 
-    .app-right{
-      background: $color-primary;
-      float: left;
-      height: 100%;
-      width: 25%;
+      .mobile-app-bottom{
+        background: $color-primary;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .mobile-app-contact{
+      height: 15em;
+      width: 100%;
+      clear: both;
+      bottom: 0;
     }
   }
-  .app-footer{
-    position: fixed;
-    height: 8%;
+}
+
+// Standard scss
+@media only screen and (min-width: 1025px) {
+  .standard-app{
+    position: relative;
+    height: 100%;
     width: 100%;
-    clear: both;
-    bottom: 0;
+    .standard-app-main{
+      width: 100%;
+      height: 84%;
+      .standard-app-left{
+        background: $color-primary;
+        width: 25%;
+        height: 100%;
+        float: left;
+      }
+
+      .standard-app-middle{
+        width: 50%;
+        float: left;
+        height: 100%;
+      }
+
+      .standard-app-right{
+        background: $color-primary;
+        float: left;
+        height: 100%;
+        width: 25%;
+      }
+    }
   }
 }

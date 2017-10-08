@@ -1,13 +1,15 @@
 @import "../../styles/_vars.scss";
 
+// Mobile
 .about-body{
   height: 100%;
   .about-body-div{
-    height: 5.5%;
+    height: 20em;
     width: 100%;
     background: $color-accent;
     position: relative;
-    h2{
+    .about-body-div-h2{
+      font-size: 6vw;
       position: absolute;
       transform: translate(-50%,-50%);
       top: 50%;
@@ -20,7 +22,7 @@
   height: 100%;
   .about-header{
     width: 100%;
-    height: 27.5vw;
+    height: 100em;
     position: relative;
     .about-header-div{
       width: 100%;
@@ -39,11 +41,13 @@
         background: rgba(4, 4, 4, 0.63);
         bottom: 0;
         .about-name{
+          font-size: 8em;
           color: $color-white;
           text-align: center;
-          margin: 1vw 0;
+          margin: .33em 0;
         }
         .about-role{
+          font-size: 6em;
           color: $color-white;
           text-align: center;
         }
@@ -55,13 +59,141 @@
     background: $color-primary;
     text-align: center;
     div{
+      h4{
+        font-size: 5.5em;
+      }
       h4:first-of-type{
-        padding: 1.5vw 0;
+        padding: 1em 0;
         margin: 0;
       }
       p{
+        font-size: 3.5em;
+        margin: .25em 0;
+      }
+      ul{
+        li{
+
+        }
       }
     }
+    div{
+      h5,h6{
+        margin: .25em 0;
+        padding: 0;
+      }
+      h5{
+        font-size: 4em;
+      }
+      h6{
+        font-size: 3em;
+      }
+      p{
+        margin-top:1em;
+      }
+    }
+    .standard-app-contact{
+      height: 15em;
+    }
+  }
+}
 
+// Standard
+@media only screen and (min-width: 1025px) {
+  .about-body{
+    height: 100%;
+    .about-body-div{
+      height: 5.5%;
+      width: 100%;
+      background: $color-accent;
+      position: relative;
+      .about-body-div-h2{
+        font-size: 2.5em;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        text-align: center
+      }
+    }
+    width: 100%;
+    height: 100%;
+    .about-header{
+      width: 100%;
+      height: 27.5vw;
+      position: relative;
+      .about-header-div{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .about-header-div-img{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+        }
+        .about-header-img-inner-div{
+          height: 25%;
+          width: 100%;
+          position: absolute;
+          background: rgba(4, 4, 4, 0.63);
+          bottom: 0;
+          .about-name{
+            font-size: 2.5em;
+            color: $color-white;
+            text-align: center;
+            margin: .33em 0;
+          }
+          .about-role{
+            font-size: 1.75em;
+            color: $color-white;
+            text-align: center;
+          }
+        }
+      }
+    }
+    main{
+      padding: 0 2%;
+      background: $color-primary;
+      text-align: center;
+      div{
+        h4{
+          font-size: 1.5em;
+        }
+        h4:first-of-type{
+          padding: 1.5vw 0;
+          margin: 0;
+        }
+        p{
+          font-size: 1.25em;
+          margin: .25em 0;
+        }
+        ul{
+          margin: 0;
+          padding: 0;
+          li{
+            padding-right: 1em;
+          }
+        }
+      }
+      div{
+        h5,h6{
+          margin: .25em 0;
+          padding: 0;
+        }
+        h5{
+          font-size: 1.25em;
+        }
+        h6{
+          font-size: 1em;
+        }
+        p{
+          margin-top: 1em;
+        }
+      }
+      .standard-app-contact{
+        height: 15em;
+      }
+    }
   }
 }

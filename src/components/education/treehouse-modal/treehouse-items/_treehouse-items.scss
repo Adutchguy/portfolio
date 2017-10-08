@@ -2,19 +2,44 @@
 
 .treehouse-ul{
   width: 100%;
+  height: 100%;
   margin: 0;
   .treehouse-ul-li{
     display: inline-block;
-    width: 20%;
+    width: 45%;
     list-style: none;
-    padding: 5%;
-    margin: 0;
+    padding: 0%;
+    margin: 2.5%;
     h6{
+      font-size: 5em;
       text-align: center;
       font-weight: bold;
     }
     img{
       width: 100%;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .treehouse-ul{
+    width: 100%;
+    margin: 0;
+    .treehouse-ul-li{
+      display: inline-block;
+      width: 20%;
+      list-style: none;
+      padding: 5%;
+      margin: 0;
+      h6{
+        font-size: 1.25em;
+        text-align: center;
+        font-weight: bold;
+      }
+      img{
+        width: 100%;
+      }
     }
   }
 }
