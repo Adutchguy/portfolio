@@ -1,7 +1,7 @@
 import './_nav.scss';
 
 import React, { Component } from 'react';
-import {BrowserRouter, Link} from 'react-router-dom';
+import {HashRouter as Router, Link} from 'react-router-dom';
 
 import Icon from '../icon';
 
@@ -16,7 +16,7 @@ class Nav extends React.Component {
   render() {
     return(
       <div className='nav-menu'>
-        <BrowserRouter
+        <Router
           forceRefresh={true}
         >
           <ul className='nav-menu-ul'>
@@ -52,7 +52,7 @@ class Nav extends React.Component {
             </li>
 
           </ul>
-        </BrowserRouter>
+        </Router>
       </div>
 
     );

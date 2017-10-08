@@ -1,7 +1,7 @@
 import './_App.scss';
 import React from 'react';
 import superagent from 'superagent';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 import Nav from '../nav';
 import About from '../about';
