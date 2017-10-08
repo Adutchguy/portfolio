@@ -16,9 +16,7 @@ class Nav extends React.Component {
   render() {
     return(
       <div className='nav-menu'>
-        <Router
-          forceRefresh={true}
-        >
+        <Router>
           <ul className='nav-menu-ul'>
             <li>
               <Icon
@@ -30,21 +28,21 @@ class Nav extends React.Component {
               />
             </li>
 
-            <li className='nav-menu-ul-home'>
+            <li onClick={this.props.handleNavIconClickEvent} className='nav-menu-ul-home'>
               <Link
                 to='/'>
                 Home
               </Link>
             </li>
 
-            <li className='nav-menu-ul-education'>
+            <li onClick={this.props.handleNavIconClickEvent} className='nav-menu-ul-education'>
               <Link
                 to='/education'>
                 Education
               </Link>
             </li>
 
-            <li className='nav-menu-ul-projects'>
+            <li onClick={this.props.handleNavIconClickEvent} className='nav-menu-ul-projects'>
               <Link
                 to='/projects'>
                 Projects
@@ -54,7 +52,6 @@ class Nav extends React.Component {
           </ul>
         </Router>
       </div>
-
     );
   }
 }
