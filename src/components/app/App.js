@@ -141,13 +141,6 @@ class App extends React.Component {
             </Router>
 
 
-            <div className='mobile-app-contact'>
-              <Contact
-                class='mobile-contact'
-              />
-            </div>
-
-
             {this.state.navIsOpen ?
               <Nav
                 handleNavIconClickEvent={this.handleNavIconClickEvent}
@@ -217,12 +210,6 @@ class App extends React.Component {
               </div>
             </main>
 
-
-            <div className='standard-app-contact'>
-              <Contact
-                class='standard-contact'
-              />
-            </div>
 
 
             {this.state.navIsOpen ?

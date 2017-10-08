@@ -4,7 +4,7 @@
 .about-body{
   height: 100%;
   .about-body-div{
-    height: 15em;
+    height: 20em;
     width: 100%;
     background: $color-accent;
     position: relative;
@@ -55,19 +55,45 @@
     }
   }
   main{
-    overflow: scroll;
     padding: 0 2%;
     background: $color-primary;
     text-align: center;
     div{
+      h4{
+        font-size: 5.5em;
+      }
       h4:first-of-type{
-        padding: 1.5vw 0;
+        padding: 1em 0;
         margin: 0;
       }
       p{
+        font-size: 3.5em;
+        margin: .25em 0;
+      }
+      ul{
+        li{
+
+        }
       }
     }
-
+    div{
+      h5,h6{
+        margin: .25em 0;
+        padding: 0;
+      }
+      h5{
+        font-size: 4em;
+      }
+      h6{
+        font-size: 3em;
+      }
+      p{
+        margin-top:1em;
+      }
+    }
+    .standard-app-contact{
+      height: 15em;
+    }
   }
 }
 
@@ -127,19 +153,47 @@
       }
     }
     main{
-      overflow: visible;
       padding: 0 2%;
       background: $color-primary;
       text-align: center;
       div{
+        h4{
+          font-size: 1.5em;
+        }
         h4:first-of-type{
           padding: 1.5vw 0;
           margin: 0;
         }
         p{
+          font-size: 1.25em;
+          margin: .25em 0;
+        }
+        ul{
+          margin: 0;
+          padding: 0;
+          li{
+            padding-right: 1em;
+          }
         }
       }
-
+      div{
+        h5,h6{
+          margin: .25em 0;
+          padding: 0;
+        }
+        h5{
+          font-size: 1.25em;
+        }
+        h6{
+          font-size: 1em;
+        }
+        p{
+          margin-top: 1em;
+        }
+      }
+      .standard-app-contact{
+        height: 15em;
+      }
     }
   }
 }

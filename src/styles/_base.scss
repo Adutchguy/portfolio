@@ -95,9 +95,8 @@ ol ul li , ul ul li { list-style: square; }
 
   @for $i from 6 through 1 {
     h#{$i} {
-      font-size: 9/($i + 2) * 1vw;
-      margin-top: 2vw;
-      margin-bottom: 2vw;
-    }
-  }
+      font-size: 9/($i + 2) * 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }  }
 }

@@ -1,14 +1,17 @@
 @import "../../../styles/_vars.scss";
 
+
+// Mobile
 .code-fellows-modal{
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 0%;
+  left: 0%;
   height: 100%;
   background: $color-modal-shade;
   z-index: 1;
   .code-fellows-modal-body{
     h3{
+      font-size: 6em;
       text-align: center;
       margin: 0;
       padding: 2% 0;
@@ -16,20 +19,87 @@
       font-weight: bold;
       border-radius: 10px 10px 0 0;
     }
-    margin: 5vw auto 0 auto;
-    width: 60%;
-    height: 70%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 90%;
     background: $color-primary;
     z-index: 99;
     box-shadow: $modal-shadowing;
     border-radius: 10px;
+    overflow-y: scroll;
     ul{
-      padding: 0 2%;
+      padding: 2% 2%;
       margin: 0;
       li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        h4{
+          font-size: 5em;
+          font-style: italic;
+        }
         p{
+          font-size: 4em;
           strong{
             font-size: 125%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Standard
+@media only screen and (min-width: 1025px) {
+  .code-fellows-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: $color-modal-shade;
+    z-index: 1;
+    .code-fellows-modal-body{
+      h3{
+        font-size: 2em;
+        text-align: center;
+        margin: 0;
+        padding: 2% 0;
+        background: $color-accent;
+        font-weight: bold;
+        border-radius: 10px 10px 0 0;
+      }
+      transform: translate(-50%,-50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      height: 80%;
+      background: $color-primary;
+      z-index: 99;
+      box-shadow: $modal-shadowing;
+      border-radius: 10px;
+      overflow-y: scroll;
+      ul{
+        width: 100%;
+        height: 100%;
+        padding: 2% 2%;
+        margin: 0;
+        li{
+          list-style: square;
+          margin: 0;
+          padding: 0;
+          h4{
+            font-size: 1.5em;
+            font-style: italic;
+          }
+          p{
+            font-size: 1.1em;
+            strong{
+              font-size: 125%;
+            }
           }
         }
       }
