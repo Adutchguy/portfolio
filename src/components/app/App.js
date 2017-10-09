@@ -28,7 +28,6 @@ class App extends React.Component {
       badges: [],
       githubRepos: [],
     };
-    this.handleEscapeKey = this.handleEscapeKey.bind(this);
     this.treehouseRequest = this.treehouseRequest.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
     this.handleNavIconClickEvent = this.handleNavIconClickEvent.bind(this);
@@ -74,10 +73,6 @@ class App extends React.Component {
     || document.documentElement.clientWidth
     || document.body.clientWidth;
     this.setState({windowWidth: width});
-  }
-
-  handleEscapeKey(e) {
-    console.log(e);
   }
 
 

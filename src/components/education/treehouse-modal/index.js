@@ -11,7 +11,6 @@ class TreehouseModal extends React.Component {
   }
 
   handleOutsideClick(e) {
-    console.log(e.target.className);
     if (e.target.className !== 'treehouse-modal') {
       return;
     }
